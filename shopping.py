@@ -112,7 +112,7 @@ def load_data(filename):
 
 # first, define helper functions:
 
-def euclidean_distance(point, X): #get eucldiean distance from a point to the whole dataset
+def euclidean_distance(point, X): #get euclidean distance from a point to the whole dataset
     X = np.array(X) #list to array
     return np.sqrt(np.sum((point - X)**2, axis = 1)) #result is an array with len(X)
 
@@ -190,7 +190,7 @@ def evaluate(labels, predictions):
             if label != prediction:
                 false_positive += 1
         
-    #false_positive = total_negative - specificity #another way to compute the fase_positives
+    #false_positive = total_negative - specificity #another way to compute the false_positives
     precision = sensitivity / (sensitivity + false_positive) #calculation of precision, necessary for f1_measure
     sensitivity /= total_positive
     specificity /= total_negative
